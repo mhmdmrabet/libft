@@ -23,4 +23,9 @@ void ft_putendl_fd(char *s, int fd);
 void ft_putchar_fd(char c, int fd);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 size_t ft_strlen(const char *s);
+int ft_isalpha(int c);
+int ft_isdigit(int c);
+int ft_isalnum(int c);
+int ft_isascii(int c);
+int ft_isprint(int c);
 #endif
