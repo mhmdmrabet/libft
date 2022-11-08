@@ -26,6 +26,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	*ft_memmove(void *destination, const void *source, size_t size);
 size_t	ft_strlen(const char *s);
 size_t	strlcpy(char *dst, const char *src, size_t size);
 int	ft_isalpha(int c);
