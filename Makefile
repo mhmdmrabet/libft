@@ -15,6 +15,7 @@ SRC = ./ft_strlen.c \
 			./ft_atoi.c \
 			./ft_strlcpy.c \
 			./ft_memcpy.c \
+			./ft_memset.c \
 
 OBJ = $(SRC:.c=.o)
 
