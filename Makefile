@@ -13,6 +13,8 @@ SRC = ./ft_strlen.c \
 			./ft_toupper.c \
 			./ft_tolower.c \
 			./ft_atoi.c \
+			./ft_strlcpy.c \
+			./ft_memcpy.c \
 
 OBJ = $(SRC:.c=.o)
 
