@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.memove.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmrabet <mmrabet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 19:42:00 by mmrabet           #+#    #+#             */
-/*   Updated: 2022/11/08 19:42:00 by mmrabet          ###   ########.fr       */
+/*   Created: 2022/11/09 11:05:54 by mmrabet           #+#    #+#             */
+/*   Updated: 2022/11/09 11:05:54 by mmrabet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*char_dest = (char *) dest;
-	char	*char_src = (char *) src;
-	int	i;
+	size_t	result;
+	void	*ptr;
+
+	result = (nmemb * size);
+	if (size > 4294967295)
+		return (NULL);
+	ptr = (void *)malloc(result);
 	
-	char_dest = (char *) dest;
-	char_src = (char *) src;
-	i = (int)n - 1;
-	if (src < dest)
-	{
-		while (i >= 0)
-		{
-			char_dest[i] = char_src[i];
-			i--;
-		}
-	}
-	else
-	{
-		ft_memcpy(dest, src, n);
-	}
-	
-	
-	return (char_dest);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, result);
+	return(ptr);
 }

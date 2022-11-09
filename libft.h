@@ -15,6 +15,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putstr_fd(char *s, int fd);
@@ -27,6 +28,12 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	*ft_memmove(void *destination, const void *source, size_t size);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlen(const char *s);
 size_t	strlcpy(char *dst, const char *src, size_t size);
 int	ft_isalpha(int c);
