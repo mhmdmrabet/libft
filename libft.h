@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putstr_fd(char *s, int fd);
