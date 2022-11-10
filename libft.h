@@ -29,6 +29,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
+char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	*ft_memmove(void *destination, const void *source, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
