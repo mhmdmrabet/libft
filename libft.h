@@ -31,6 +31,7 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
 void	*ft_memmove(void *destination, const void *source, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

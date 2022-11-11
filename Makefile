@@ -29,6 +29,7 @@ SRC = ./ft_strlen.c \
 			./ft_strnstr.c \
 			./ft_memcmp.c \
 			./ft_split.c \
+			./ft_itoa.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -48,6 +49,8 @@ fclean: clean
 		rm -f $(NAME)
 
 re:		fclean all
+
+.PHONY: all, clean, fclean, re
 
 exec: all
 	 gcc test/ft_$(f).c -L. -lft 
