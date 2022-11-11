@@ -30,6 +30,7 @@ SRC = ./ft_strlen.c \
 			./ft_memcmp.c \
 			./ft_split.c \
 			./ft_itoa.c \
+			./ft_strlcat.c \
 
 OBJ = $(SRC:.c=.o)
 
