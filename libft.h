@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t	strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
