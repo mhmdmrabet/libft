@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
@@ -32,6 +33,7 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 void	*ft_memmove(void *destination, const void *source, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);

@@ -31,6 +31,7 @@ SRC = ./ft_strlen.c \
 			./ft_split.c \
 			./ft_itoa.c \
 			./ft_strlcat.c \
+			./ft_strtrim.c \
 
 OBJ = $(SRC:.c=.o)
 
