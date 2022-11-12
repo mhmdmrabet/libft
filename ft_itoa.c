@@ -32,27 +32,31 @@ static int	len(long nb)
 	return (len);
 }
 
+static void	add_neg(char *str, long *n)
+{
+	str[0] = '-';
+	*n *= -1;
+}
+
 char	*ft_itoa(int nb)
 {
 	char	*str;
 	long	n;
-	int	i;
+	int		i;
 
 	n = nb;
 	i = len(n);
-	if (!(str = (char *)malloc(i + 1)))
+	str = (char *)malloc(i + 1);
+	if (!str)
 		return (NULL);
 	str[i--] = '\0';
 	if (n == 0)
 	{
 		str[0] = 48;
-		return(str);
+		return (str);
 	}
 	if (n < 0)
-	{
-		str[0] = '-';
-		n *= -1;
-	}
+		add_neg(str, &n);
 	while (n > 0)
 	{
 		str[i--] = 48 + (n % 10);

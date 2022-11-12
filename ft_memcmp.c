@@ -14,10 +14,10 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
 	unsigned const char	*char_str1;
 	unsigned const char	*char_str2;
-	
+	size_t				i;
+
 	char_str1 = (unsigned const char *)s1;
 	char_str2 = (unsigned const char *)s2;
 	i = 0;
