@@ -26,7 +26,7 @@ static int	is_separator(char c, char const *set)
 	return (0);
 }
 
-static int	count_sep(char const *str, char const *set)
+static int	count_first_sep(char const *str, char const *set)
 {
 	int	i;
 	int	count;
@@ -35,9 +35,29 @@ static int	count_sep(char const *str, char const *set)
 	count = 0;
 	while (str[i])
 	{
-		if (is_separator(str[i], set) == 1)
+		if(is_separator(str[i], set) == 1)
 			count++;
+		else
+			break;
 		i++;
+	}
+	return (count);
+}
+
+static int	count_last_sep(char const *str, char const *set)
+{
+	int	count;
+	int	str_len;
+
+	count = 0;
+	str_len = ft_strlen(str) - 1;
+	while (str[str_len])
+	{
+		if(is_separator(str[str_len], set) == 1)
+			count++;
+		else
+			break;
+		str_len--;
 	}
 	return (count);
 }
@@ -48,23 +68,32 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	j;
 	char	*str;
 	int	len_without_sep;
+	int	first_count;
+	int	last_count;
+	int	str_len;
 
+	str_len = ft_strlen(s1);
 	i = 0;
 	j = 0;
-	len_without_sep = ft_strlen(s1) - count_sep(s1, set);
+	len_without_sep = 0;
+	first_count = count_first_sep(s1, set);
+	last_count = count_last_sep(s1, set);
+	if (str_len != first_count)
+		len_without_sep = str_len - first_count - last_count;
 	if(!(str = (char *)malloc(sizeof(char) * (len_without_sep + 1))))
 		return (0);
 	str[len_without_sep] = '\0';
-	while (s1[i])
+	i= first_count;
+	while (s1[i] && (i < str_len - last_count))
 	{
-		if (is_separator(s1[i], set) == 1)
-		{
-			i++;
-			continue;
-		}
 		str[j] = s1[i];
 		i++;
 		j++;
 	}
 	return (str);
 }
+
+// int main() {
+//   ft_strtrim("   xxxtripouille   xxx", " x");
+//   return 0;
+// }

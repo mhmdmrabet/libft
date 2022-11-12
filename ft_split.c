@@ -83,6 +83,6 @@ char	**ft_split(char const *s, char c)
 		while (*s && (*s != c))
 			s++;
 	}
-	strs[i] = '\0';
+	strs[i] = 0;
 	return (strs);
 }
